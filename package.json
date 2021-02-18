@@ -1,0 +1,23 @@
+{
+  "name": "lab04_users_database",
+  "version": "1.0.0",
+  "description": "Full Stack II Lab 04",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/evgeniya-zhukova/Lab04_users_database.git"
+  },
+  "author": "Evgeniya Zhukova",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/evgeniya-zhukova/Lab04_users_database/issues"
+  },
+  "homepage": "https://github.com/evgeniya-zhukova/Lab04_users_database#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.11.17"
+  }
+}
