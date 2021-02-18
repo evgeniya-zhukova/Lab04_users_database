@@ -22,30 +22,6 @@ app.get('/users', async (req, res) => {
   }
 });
 
-//Some more test queries
-//http://localhost:8081/users/test
-app.get('/users/test', async (req, res) => {
-  try {
-    const users = userModel.
-                        find({})
-                        //.where('lastname').equals('patel')
-                        //.where('salary').gte(1000.00).lte(10000.00)
-                        //.where('firstname').in(['pritesh', 'moksh'])
-                        //.limit(10)
-                        //.sort('-salary')
-                        //.select('firstname lastname salary')
-                        .exec((err, data) => {
-                          if (err){
-                              res.send(JSON.stringify({status:false, message: "No data found"}));
-                          }else{
-                              res.send(data);
-                          }
-                        });
-    } catch (err) {
-      res.status(500).send(err);
-    }
-});
-
 //http://localhost:8081/user
 app.post('/user', async (req, res) => {
 
@@ -55,7 +31,7 @@ app.post('/user', async (req, res) => {
       await user.save((err) => {
         if(err){
           //Custome error handling
-          //console.log(err.errors['firstname'].message)
+          //console.log(err.errors['name'].message)
           //console.log(err.errors['lastname'].message)
           //console.log(err.errors['gender'].message)
           //console.log(err.errors['salary'].message)
